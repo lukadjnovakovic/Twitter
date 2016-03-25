@@ -1,5 +1,6 @@
 package menjacnica;
 
+
 import java.util.LinkedList;
 
 import menjacnica.valute.Valuta;
@@ -13,6 +14,9 @@ public class Menjacnica {
 	}
 
 	public void setValute(LinkedList<Valuta> valute) {
+		if(valute.isEmpty()){
+			return;
+		}
 		this.valute = valute;
 	}
 

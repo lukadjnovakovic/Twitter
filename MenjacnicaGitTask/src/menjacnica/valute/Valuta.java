@@ -13,30 +13,45 @@ public class Valuta {
 		return naziv;
 	}
 	public void setNaziv(String naziv) {
+		if(naziv == null || naziv == ""){
+			return;
+		}
 		this.naziv = naziv;
 	}
 	public String getSkraceniNaziv() {
 		return skraceniNaziv;
 	}
 	public void setSkraceniNaziv(String skraceniNaziv) {
+		if(skraceniNaziv == null || skraceniNaziv == ""){
+			return;
+		}
 		this.skraceniNaziv = skraceniNaziv;
 	}
 	public double getProdajniKurs() {
 		return prodajniKurs;
 	}
 	public void setProdajniKurs(double prodajniKurs) {
+		if(prodajniKurs == 0){
+			return;
+		}
 		this.prodajniKurs = prodajniKurs;
 	}
 	public double getKupovniKurs() {
 		return kupovniKurs;
 	}
 	public void setKupovniKurs(double kupovniKurs) {
+		if(kupovniKurs == 0){
+			return;
+		}
 		this.kupovniKurs = kupovniKurs;
 	}
 	public double getSrednjiKurs() {
 		return srednjiKurs;
 	}
 	public void setSrednjiKurs(double srednjiKurs) {
+		if(srednjiKurs == 0){
+			return;
+		}
 		this.srednjiKurs = srednjiKurs;
 	}
 	@Override
