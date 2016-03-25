@@ -17,16 +17,24 @@ public class ManipulacijaMenjacnice implements InterfaceMenjacnice {
 		nova.setSrednjiKurs(c);
 	}
 
-	@Override
-	public void obrisiKurs(double a,double b,double c,LinkedList<Valuta> valute) {
+
+	public void obrisiKurs(double a, double b, double c, LinkedList<Valuta> valute) {
 		// TODO Auto-generated method stub
+		for(int i = 0; i<valute.size(); i++){
+			if(valute.get(i).getKupovniKurs()==a && valute.get(i).getProdajniKurs()==b && valute.get(i).getSrednjiKurs() == c ){
+				valute.remove(i);
+			}
+		}
 		
 	}
 
 	@Override
-	public double pronadjiKurs(double a,double b,double c,LinkedList<Valuta> valute) {
-		// TODO Auto-generated method stub
-		return 0;
+	public Valuta pronadjiKurs(double a, double b, double c, LinkedList<Valuta> valute) {
+		for(int i = 0; i<valute.size(); i++){
+			if(valute.get(i).getKupovniKurs()==a && valute.get(i).getProdajniKurs()==b && valute.get(i).getSrednjiKurs() == c ){
+				return valute.get(i);
+			}
+		}
+		return null;
 	}
-
 }
