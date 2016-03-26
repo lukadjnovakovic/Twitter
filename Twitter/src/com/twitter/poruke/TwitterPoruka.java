@@ -40,7 +40,7 @@ public class TwitterPoruka {
 	 * @return tekstPoruke
 	 */
 	public String getPoruka() {
-		return "poruka";
+		return this.poruka;
 	}
 	
 	/**
@@ -48,7 +48,7 @@ public class TwitterPoruka {
 	 * @param poruka
 	 */
 	public void setPoruka(String poruka) {
-		if (poruka==null || this.poruka.length()>140)
+		if (poruka==null || poruka.length()>140)
 			throw new RuntimeException(
 					"Poruka mora biti uneta i mora imati najvise 140 znakova");
 		this.poruka = poruka;
